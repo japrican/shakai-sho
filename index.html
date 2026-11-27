@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+<script>/* 同じ学年の単品を4教科以上買った人は、セット扱いにする（4教科分＝3,920円でセット3,500円より高いため） */
+(function(){try{var L=localStorage,n=function(ks,v){return ks.filter(function(k){return L.getItem('app_unlocked_'+k)===v}).length};
+if(!L.getItem('bundle_sho_unlocked_v1')&&n(['sansu','kokugo-sho','kanji','rika-sho','shakai-sho','eigo'],'1')>=4){L.setItem('bundle_sho_unlocked_v1','1');window.__autoSet='sho'}
+if(L.getItem('bundle_unlocked_v1')!=='true'&&n(['math','english','science','kokugo','shakai','history'],'true')>=4){L.setItem('bundle_unlocked_v1','true');window.__autoSet='chu'}}catch(e){}})();</script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>しゃかいバトル｜学びのミカタ</title>
