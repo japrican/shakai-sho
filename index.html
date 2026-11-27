@@ -1287,5 +1287,9 @@ document.getElementById('inappX').onclick=function(){d.remove();try{sessionStora
 document.getElementById('inappCp').onclick=function(){var b=this,l=location.href;if(navigator.clipboard)navigator.clipboard.writeText(l).then(function(){b.textContent='コピーしました！'+br+'に貼りつけて開いてね'},function(){b.textContent=l});else b.textContent=l};
 }catch(e){}})();</script>
 
+<script data-goatcounter="https://manabinomikata.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>/* アクセス解析：購入ボタンのクリックと購入完了を記録（個人は特定しない） */
+window.gcEv=function(p,t,n){n=n||0;if(window.goatcounter&&window.goatcounter.count){try{window.goatcounter.count({path:p,title:t||p,event:true})}catch(e){}}else if(n<20)setTimeout(function(){gcEv(p,t,n+1)},300)};
+document.addEventListener('click',function(e){var el=e.target.closest&&e.target.closest('a[href*="buy.stripe.com"],button[onclick*="goBuy"],a[data-buy]');if(!el)return;var app=location.pathname.split('/')[1]||'top',set=/goBuySet/.test(el.getAttribute('onclick')||'')||/セット/.test(el.textContent||'');gcEv('buy-click/'+app+(set?'/set':'/single'),'購入ボタン '+app+(set?' セット':' 単品'))},true);</script>
 </body>
 </html>
